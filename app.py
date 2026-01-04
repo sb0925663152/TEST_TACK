@@ -24,7 +24,7 @@ if st.button("開始分析"):
         try:
             # 1. 配置 Gemini
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-pro')
+            model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
             # 2. 抓取數據
             with st.spinner('正在獲取市場數據...'):
@@ -62,5 +62,6 @@ if st.button("開始分析"):
         except Exception as e:
 
             st.error(f"發生錯誤: {e}")
+
 
 
